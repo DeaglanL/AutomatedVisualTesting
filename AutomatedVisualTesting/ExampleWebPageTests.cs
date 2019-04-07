@@ -26,7 +26,7 @@ namespace AutomatedVisualTesting
         {
             var baseImage = "GoogleHomePage.png";
 
-            var driver = new ChromeDriver();
+            var driver = new ChromeDriver(@"C:\Users\Deaglan\Documents\Repos\dotnetAutomatedTesting\bin\Debug\netcoreapp2.1");
             driver.Navigate().GoToUrl("http://www.google.co.uk/");
 
             var options = new ComparisonOptions { CreateDifferenceImage = true };
@@ -88,7 +88,7 @@ namespace AutomatedVisualTesting
             // as this can muck up full page screenshots
             chromeOptions.AddArguments("disable-infobars");
 
-            Driver = new ChromeDriver(chromeOptions);
+            Driver = new ChromeDriver(@"C:\Users\Deaglan\Documents\Repos\dotnetAutomatedTesting\bin\Debug\netcoreapp2.1", chromeOptions);
         }
     }
 }

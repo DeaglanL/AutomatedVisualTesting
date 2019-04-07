@@ -39,7 +39,15 @@ namespace AutomatedVisualTesting
             // as this can muck up full page screenshots
             chromeOptions.AddArguments("disable-infobars");
 
-            Driver = new ChromeDriver(chromeOptions);
+            Driver = new ChromeDriver(@"C:\Users\Deaglan\Documents\Repos\dotnetAutomatedTesting\bin\Debug\netcoreapp2.1", chromeOptions);
+        }
+
+        [TestMethod]
+        public void WebdriverTest()
+        {
+            Driver.Manage().Window.Maximize();
+            Driver.Url = "https://deaglanl.github.io/";
+            Driver.Close();
         }
     }
 }

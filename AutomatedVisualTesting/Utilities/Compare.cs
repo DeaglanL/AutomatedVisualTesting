@@ -1,20 +1,20 @@
 ﻿using System;
-using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Drawing.Imaging;
+using System.DrawingCore;
+using System.DrawingCore.Drawing2D;
+using System.DrawingCore.Imaging;
 using System.IO;
 using OpenQA.Selenium;
 using static AutomatedVisualTesting.Utilities.SeleniumDriver;
-using static System.Configuration.ConfigurationManager;
+using System.Configuration;
 
 namespace AutomatedVisualTesting.Utilities
 {
     public static class Compare
     {
         private const int CELL_SIZE = 16;
-
-        private static readonly string TestDataDirectory = AppSettings.Get("TestDataDirectory");
-        private static readonly string OutputDirectory = AppSettings.Get("OutputDirectory");
+        
+        private static readonly string TestDataDirectory = ConfigurationManager.AppSettings.Get("TestDataDirectory");
+        private static readonly string OutputDirectory = ConfigurationManager.AppSettings.Get("OutputDirectory");
 
         private static readonly ColorMatrix ColorMatrix =
             new ColorMatrix(new[]

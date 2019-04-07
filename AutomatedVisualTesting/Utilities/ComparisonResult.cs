@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+﻿using System.DrawingCore;
 
 namespace AutomatedVisualTesting.Utilities
 {
