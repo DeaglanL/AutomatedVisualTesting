@@ -80,6 +80,19 @@ namespace AutomatedVisualTesting
             Assert.IsTrue(result.Match);
         }
 
+        [TestMethod]
+        public void dotnetCoreConversionTest()
+        {
+            Driver.Manage().Window.Maximize();
+            Driver.Url = "https://deaglanl.github.io/";
+            var baseImage = "DeaglabGithub.Chrome.png";
+
+            var result = Differences(baseImage, Driver, _options);
+
+            Assert.IsTrue(result.Match);
+            Driver.Close();
+        }
+
         [TestInitialize]
         public void Startup()
         {
